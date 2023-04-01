@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.img-fluid{
+    
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar-toggler-icon{
+    color: white;
+}
+.container-fluid .navbar-brand{
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    position: fixed;
+}
+
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.aboutme-image {
+    width: 50%;
+   
+}

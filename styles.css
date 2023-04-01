@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.img-fluid{
+    
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+}
+
+.navbar-toggler-icon{
+    color: white;
+}
+.container-fluid .navbar-brand{
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+h1{
+    color: white;
+    font-size: clamp(500px, 7vw + 1 rem, 100px);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position:fixed;
+    width: 1000px;
+    height: 300px;
+
+    
+}
+
+.fade-in-fade-out, h1{
+    animation: fade-inout 5s ;
+    color: #ffffff;
+    
+}
+
+@keyframes fade-inout{
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+.hero-container {
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

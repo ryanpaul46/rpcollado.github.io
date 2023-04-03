@@ -42,5 +42,5 @@ body{
 }
 
 .my-lg-5 {
-    margin-left: ($spacer * .25) !important;
+    margin-left: (spacer * .25) !important;
   }

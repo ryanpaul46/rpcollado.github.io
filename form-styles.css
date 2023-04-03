@@ -59,15 +59,7 @@
     }
 }
 
-.img-fluid{
-    
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: flex;
-}
+
 
 .navbar-toggler-icon{
     color: white;

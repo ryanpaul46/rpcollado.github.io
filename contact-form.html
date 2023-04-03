@@ -4,57 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href="./form-styles.css" rel="stylesheet" >
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
     <title>Contact Form</title>
 </head>
+<body>
+  
 
     <!--Nav Section-->
-    <img class="img-fluid" src="images/website-background.png" alt="developer">
 
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">RPC Web Development</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active mx-3 fs-5 text-white" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-3 fs-5 text-white" href="contact-form.html">Contact Me</a>
-              </li>
-            </ul>
-          </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">RPC Web Development</a>
+        <button class="navbar-toggler ms-auto bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active mx-3 fs-5 text-white" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-3 fs-5 text-white" href="contact-form.html">Contact Me</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    
+      </div>
+    </nav>
+  
 
     <!--Form Section-->
+<form action="https://sheetdb.io/api/v1/jqmkg7nk04i89" method="post" id="sheetdb-form">
 <div class="container">
     <div class="row">
         <div class="col-md-7 text-white">
           <h4>Get in touch</h4>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+                <label for="formGroupExampleInput" class="form-label" id="Name">Name</label>
+                <input type="text" required class="form-control" id="formGroupExampleInput" name="data[Full Name]" placeholder="Enter your name">
               </div>
               <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Email</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your email">
+                <label for="formGroupExampleInput2" class="form-label" id="Email">Email</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="data[Email]" placeholder="Enter your email">
               </div>
               <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Contact Number</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your number">
+                <label for="formGroupExampleInput2" class="form-label" id="Contact Number">Contact Number</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="data[Contact Number]" placeholder="Enter your number">
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="exampleFormControlTextarea1" class="form-label" id="Message">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="data[Message]" rows="3"></textarea>
               </div>
               <button class="btn btn-secondary" onclick="submit();">Submit</button>
         </div>
@@ -81,11 +86,6 @@
         </div>
     </div>
 </div>
-
-    <script type="text/javascript">
-        function submit()
-        {
-            swal("Thank You!", "For Your Response", "success");
-        }
-    </script>
+</form>
+</body>
 </html>
